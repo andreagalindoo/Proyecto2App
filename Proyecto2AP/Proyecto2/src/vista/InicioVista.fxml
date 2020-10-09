@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Start">
+   <center>
+      <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="598.0" style="-fx-background-color: yellow;">
+               <children>
+                  <Pane layoutX="12.0" layoutY="221.0" prefHeight="60.0" prefWidth="573.0" style="-fx-background-color: green;">
+                     <children>
+                        <Button fx:id="btnCliente" layoutX="5.0" layoutY="17.0" mnemonicParsing="false" onAction="#clientManagement" prefHeight="25.0" prefWidth="82.0" text="Clientes">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="btnProducto" layoutX="210.0" layoutY="17.0" mnemonicParsing="false" onAction="#ProductManagement" prefHeight="26.0" prefWidth="90.0" text="Productos">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font></Button>
+                        <Button fx:id="btnOrden" layoutX="442.0" layoutY="17.0" mnemonicParsing="false" onAction="#gestionOrden" prefHeight="25.0" prefWidth="75.0" text="Ordenes">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font></Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="2.0" layoutY="316.0" prefHeight="68.0" prefWidth="594.0" style="-fx-background-color: green;">
+                     <children>
+                        <Label layoutX="102.0" layoutY="13.0" text="SISTEMA DE VENTAS">
+                           <font>
+                              <Font name="Arial" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="206.0" fitWidth="403.0" layoutX="-25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logoautopartes.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnSalir" layoutX="447.0" layoutY="54.0" mnemonicParsing="false" onAction="#GetOut" text="Salir">
+                     <font>
+                        <Font name="Arial" size="24.0" />
+                           </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

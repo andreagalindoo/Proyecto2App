@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="404.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Product">
+   <children>
+      <Pane layoutX="3.0" layoutY="68.0" prefHeight="329.0" prefWidth="667.0" style="-fx-background-color: yellow;">
+         <children>
+            <TableView fx:id="tabla" layoutX="223.0" layoutY="3.0" onMouseClicked="#click" prefHeight="241.0" prefWidth="440.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="colDescripcion" prefWidth="148.0" text="Descripcion" />
+                  <TableColumn fx:id="colPrecio" prefWidth="93.0" text="Precio Unidad" />
+                  <TableColumn fx:id="colCantidad" prefWidth="70.0" text="Cantidad" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnInsertar" layoutX="303.0" layoutY="255.0" mnemonicParsing="false" onAction="#insert" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: green;" text="Insertar">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnActualizar" layoutX="564.0" layoutY="255.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: green;" text="Actualizar">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnEliminar" layoutX="473.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: green;" text="Eliminar">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font></Button>
+            <VBox alignment="TOP_CENTER" layoutX="1.0" layoutY="-3.0" prefHeight="216.0" prefWidth="188.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="txtId" editable="false" promptText="Id" />
+                  <TextField fx:id="txtNombre" promptText="Nombre" />
+                  <TextField fx:id="txtDescripcion" promptText="Descripcion" />
+                  <TextField fx:id="txtPrecio" promptText="Precio Unidad" />
+                  <TextField fx:id="txtCantidad" promptText="Cantidad" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </VBox>
+            <Button layoutX="387.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: green;" text="Nuevo">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnGrid" layoutX="391.0" layoutY="290.0" mnemonicParsing="false" onAction="#mostrarP" style="-fx-background-color: gray;" text="GRID PRODUCTOS" />
+            <Button fx:id="btnRegresar" layoutX="37.0" layoutY="268.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="91.0" text="Regresar">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Pane layoutX="-4.0" prefHeight="54.0" prefWidth="684.0" style="-fx-background-color: green;">
+         <children>
+            <Label layoutX="226.0" layoutY="14.0" prefHeight="21.0" prefWidth="276.0" text="GESTION DE PRODUCTOS">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8907281160354614" green="0.9780701994895935" blue="0.7909085750579834" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.961831271648407" blue="0.6728395223617554" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>
